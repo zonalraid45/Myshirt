@@ -2,7 +2,7 @@ token: "TokenTimeIsBackBuddyss"         # Lichess OAuth2 Token.
 
 engines:
   bullet:                               # Engine used for standard chess and when no suitable special engine is configured.
-    dir: "./engines"                      # Directory containing the engine.
+    dir: "./Myshirt/ngines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
@@ -15,7 +15,7 @@ engines:
    #   depth: 28                          # Maximum search depth for bullet.
 
   chess960:                               # Engine used for standard chess and when no suitable special engine is configured.
-    dir: "./engines"                      # Directory containing the engine.
+    dir: "./Myshirt/engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
@@ -27,7 +27,7 @@ engines:
     limits:
     
   standard:                               # Engine used for standard chess and when no suitable special engine is configured.
-    dir: "./engines"                      # Directory containing the engine.
+    dir: "./Myshirt/engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
@@ -40,7 +40,7 @@ engines:
   #    depth: 35                           # Deep search for standard games.
   #    nodes: 8000000                      # High node count for thorough analysis.
   variants:                               # Engine used for variants when no suitable special engine is configured.
-    dir: "./engines"                      # Directory containing the engine.
+    dir: "./Myshirt/engines"                      # Directory containing the engine.
     name: "fsf"           # Binary name of the engine to use. (You need to download Fairy-Stockfish and place it in the engines directory)
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
@@ -371,29 +371,30 @@ blacklist:                                # List of users who are not challenged
 
 
 books:                                    
-  Kasparov: "./masterbooks/Kasparov.bin"     # Kasparov's opening book 
-  Carlsen: "./masterbooks/Carlsen.bin"       # Carlsen's opening book
-  Caruana: "./masterbooks/Caruana.bin"       # Caruana's opening book
-  Ding: "./masterbooks/Ding.bin"             # Ding's opening book
-  Gukesh: "./masterbooks/Gukesh.bin"         # Gukesh's opening book
-  Nakamura: "./masterbooks/Nakamura.bin"     # Nakamura's opening book
-  Nepomniachtchi: "./masterbooks/Nepomniachtchi.bin"  # Nepomniachtchi's opening book
-  probook: "./books/probook.bin"
-  whiteanti: "./books/whiteanti.bin"
-  blackanti: "./books/blackanti.bin"
-  blackrk: "./books/blackrk.bin"
-  whiterk: "./books/whiterk.bin"
-  whiteatomic: "./books/whiteatomic.bin"
-  blackatomic: "./books/blackatomic.bin"
-  horde: "./books/horde.bin"
-  chess960: "./books/chess960.bin"
-  whitekingofhill: "./books/whitekingofhill.bin"
-  blackkingofhill: "./books/blackkingofhill.bin"
-  crazyhouse: "./books/crazyhouse.bin"
-  white3check: "./books/white3check.bin"
-  black3check: "./books/black3check.bin"
-  small: "./books/small.bin"
-  nimas: "./books/nimas.bin"
+  Kasparov: "./Myshirt/masterbooks/Kasparov.bin"     # Kasparov's opening book 
+  Carlsen: "./Myshirt/masterbooks/Carlsen.bin"       # Carlsen's opening book
+  Caruana: "./Myshirt/masterbooks/Caruana.bin"       # Caruana's opening book
+  Ding: "./Myshirt/masterbooks/Ding.bin"             # Ding's opening book
+  Gukesh: "./Myshirt/masterbooks/Gukesh.bin"         # Gukesh's opening book
+  Nakamura: "./Myshirt/masterbooks/Nakamura.bin"     # Nakamura's opening book
+  Nepomniachtchi: "./Myshirt/masterbooks/Nepomniachtchi.bin"  # Nepomniachtchi's opening book
+  probook: "./Myshirt/books/probook.bin"
+  whiteanti: "./Myshirt/books/whiteanti.bin"
+  blackanti: "./Myshirt/books/blackanti.bin"
+  blackrk: "./Myshirt/books/blackrk.bin"
+  whiterk: "./Myshirt/books/whiterk.bin"
+  whiteatomic: "./Myshirt/books/whiteatomic.bin"
+  blackatomic: "./Myshirt/books/blackatomic.bin"
+  horde: "./Myshirt/books/horde.bin"
+  chess960: "./Myshirt/books/chess960.bin"
+  whitekingofhill: "./Myshirt/books/whitekingofhill.bin"
+  blackkingofhill: "./Myshirt/books/blackkingofhill.bin"
+  crazyhouse: "./Myshirt/books/crazyhouse.bin"
+  white3check: "./Myshirt/books/white3check.bin"
+  black3check: "./Myshirt/books/black3check.bin"
+  small: "./Myshirt/books/small.bin"
+  nimas: "./Myshirt/books/nimas.bin"
+
 
 
 
