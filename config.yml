@@ -105,7 +105,7 @@ opening_books:
         - probook
         - nimas
     bullet_white:                            # Other bullet games (1+0)
-      selection: weighted_random
+      selection: best_move 
   #   max_depth: 20                    # Limit book depth so engine evaluates positions
       names:
         - probook
@@ -117,12 +117,12 @@ opening_books:
         - probook
         - nimas
     3+0:                             # Blitz games (5+3)
-      selection: weighted_random
+      selection: best_move 
       names:
         - probook
         - nimas
     standard:                           
-      selection: weighted_random
+      selection: best_move
       names:
         - nimas
     antichess_white:
@@ -396,6 +396,7 @@ books:
   black3check: "./books/black3check.bin"
   small: "./books/small.bin"
   nimas: "./books/nimas.bin"
+
 
 
 
