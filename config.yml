@@ -1,8 +1,8 @@
-token: "TokenTimeIsBackBuddyss"         # Lichess OAuth2 Token.
+token: "XXXXXXXXXXXXXXXXXXX"         # Lichess OAuth2 Token.
 
 engines:
   bullet:                               # Engine used for standard chess and when no suitable special engine is configured.
-    dir: "./Myshirt/ngines"                      # Directory containing the engine.
+    dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
@@ -15,7 +15,7 @@ engines:
    #   depth: 28                          # Maximum search depth for bullet.
 
   chess960:                               # Engine used for standard chess and when no suitable special engine is configured.
-    dir: "./Myshirt/engines"                      # Directory containing the engine.
+    dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
@@ -27,7 +27,7 @@ engines:
     limits:
     
   standard:                               # Engine used for standard chess and when no suitable special engine is configured.
-    dir: "./Myshirt/engines"                      # Directory containing the engine.
+    dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
@@ -40,14 +40,14 @@ engines:
   #    depth: 35                           # Deep search for standard games.
   #    nodes: 8000000                      # High node count for thorough analysis.
   variants:                               # Engine used for variants when no suitable special engine is configured.
-    dir: "./Myshirt/engines"                      # Directory containing the engine.
-    name: "fsf"           # Binary name of the engine to use. (You need to download Fairy-Stockfish and place it in the engines directory)
+    dir: "./engines"                      # Directory containing the engine.
+    name: "fairy-stockfish_x86-64-bmi2"           # Binary name of the engine to use. (You need to download Fairy-Stockfish and place it in the engines directory)
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
     move_overhead_multiplier: 1.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 8                          # High thread count for variants.
-      Hash: 11000                           # Large hash for variant calculations.
+      Hash: 10000                           # Large hash for variant calculations.
       Move Overhead: 100                  # Increase if your bot flags games too often.
       Use NNUE: true
       EvalFile: "3check-cb5f517c228b.nnue:antichess-dd3cbe53cd4e.nnue:atomic-2cf13ff256cc.nnue:crazyhouse-8ebf84784ad2.nnue:horde-28173ddccabe.nnue:kingofthehill-978b86d0e6a4.nnue:racingkings-636b95f085e3.nnue"
@@ -85,7 +85,7 @@ gaviota:
   max_pieces: 5                           # Count of max pieces in the local gaviota endgame tablebases.
 
 opening_books:
-  enabled: true                           # Activate opening books.
+  enabled: false                           # Activate opening books.
   priority: 400                           # Priority with which this move source is used. Higher priority is used first.
   read_learn: false                       # Whether to read the learn values from the books.
   books:
@@ -371,31 +371,29 @@ blacklist:                                # List of users who are not challenged
 
 
 books:                                    
-  Kasparov: "./Myshirt/masterbooks/Kasparov.bin"     # Kasparov's opening book 
-  Carlsen: "./Myshirt/masterbooks/Carlsen.bin"       # Carlsen's opening book
-  Caruana: "./Myshirt/masterbooks/Caruana.bin"       # Caruana's opening book
-  Ding: "./Myshirt/masterbooks/Ding.bin"             # Ding's opening book
-  Gukesh: "./Myshirt/masterbooks/Gukesh.bin"         # Gukesh's opening book
-  Nakamura: "./Myshirt/masterbooks/Nakamura.bin"     # Nakamura's opening book
-  Nepomniachtchi: "./Myshirt/masterbooks/Nepomniachtchi.bin"  # Nepomniachtchi's opening book
-  probook: "./Myshirt/books/probook.bin"
-  whiteanti: "./Myshirt/books/whiteanti.bin"
-  blackanti: "./Myshirt/books/blackanti.bin"
-  blackrk: "./Myshirt/books/blackrk.bin"
-  whiterk: "./Myshirt/books/whiterk.bin"
-  whiteatomic: "./Myshirt/books/whiteatomic.bin"
-  blackatomic: "./Myshirt/books/blackatomic.bin"
-  horde: "./Myshirt/books/horde.bin"
-  chess960: "./Myshirt/books/chess960.bin"
-  whitekingofhill: "./Myshirt/books/whitekingofhill.bin"
-  blackkingofhill: "./Myshirt/books/blackkingofhill.bin"
-  crazyhouse: "./Myshirt/books/crazyhouse.bin"
-  white3check: "./Myshirt/books/white3check.bin"
-  black3check: "./Myshirt/books/black3check.bin"
-  small: "./Myshirt/books/small.bin"
-  nimas: "./Myshirt/books/nimas.bin"
-
-
+  Kasparov: "./masterbooks/Kasparov.bin"     # Kasparov's opening book 
+  Carlsen: "./masterbooks/Carlsen.bin"       # Carlsen's opening book
+  Caruana: "./masterbooks/Caruana.bin"       # Caruana's opening book
+  Ding: "./masterbooks/Ding.bin"             # Ding's opening book
+  Gukesh: "./masterbooks/Gukesh.bin"         # Gukesh's opening book
+  Nakamura: "./masterbooks/Nakamura.bin"     # Nakamura's opening book
+  Nepomniachtchi: "./masterbooks/Nepomniachtchi.bin"  # Nepomniachtchi's opening book
+  probook: "./books/probook.bin"
+  whiteanti: "./books/whiteanti.bin"
+  blackanti: "./books/blackanti.bin"
+  blackrk: "./books/blackrk.bin"
+  whiterk: "./books/whiterk.bin"
+  whiteatomic: "./books/whiteatomic.bin"
+  blackatomic: "./books/blackatomic.bin"
+  horde: "./books/horde.bin"
+  chess960: "./books/chess960.bin"
+  whitekingofhill: "./books/whitekingofhill.bin"
+  blackkingofhill: "./books/blackkingofhill.bin"
+  crazyhouse: "./books/crazyhouse.bin"
+  white3check: "./books/white3check.bin"
+  black3check: "./books/black3check.bin"
+  small: "./books/small.bin"
+  nimas: "./books/nimas.bin"
 
 
 
