@@ -100,19 +100,19 @@ opening_books:
 #       - BlackBook
     0.5+0:                          # 30 sec bullet games (0.5+0)
       selection: best_move
-      max_depth: 20                    # Limit book depth so engine evaluates positions
+    # max_depth: 20                    # Limit book depth so engine evaluates positions
       names:
         - probook
         - nimas
     bullet_white:                            # Other bullet games (1+0)
       selection: weighted_random
-      max_depth: 20                    # Limit book depth so engine evaluates positions
+  #   max_depth: 20                    # Limit book depth so engine evaluates positions
       names:
         - probook
         - nimas
     bullet_black:                            # Aggressive black bullet setup
       selection: best_move                # Always play strongest moves as black
-      max_depth: 15                    # Deeper book usage for black preparation
+    # max_depth: 15                    # Deeper book usage for black preparation
       names:
         - probook
         - nimas
@@ -396,6 +396,7 @@ books:
   black3check: "./books/black3check.bin"
   small: "./books/small.bin"
   nimas: "./books/nimas.bin"
+
 
 
 
