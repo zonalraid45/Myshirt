@@ -122,12 +122,13 @@ opening_books:
     3+0:                             # Blitz games (5+3)
       selection: best_move 
       names:
+        - draw
         - probook
         - nimas
     standard:                           
       selection: best_move
       names:
-        - small
+        - draw
         - nimas
         - probook
     antichess_white:
@@ -401,6 +402,7 @@ books:
   black3check: "./books/black3check.bin"
   small: "./books/small.bin"
   nimas: "./books/nimas.bin"
+  draw: "./books/draw.bin"
 
 
 
