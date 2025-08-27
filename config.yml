@@ -37,7 +37,7 @@ engines:
       Hash: 4000                           # Massive hash for deep calculation.
       Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:    
-      time: 3.0
+      time: 2.0
   #    depth: 35                           # Deep search for standard games.
   #    nodes: 8000000                      # High node count for thorough analysis.
 
@@ -440,6 +440,7 @@ books:
   Two: "./books/Book2.bin"
   Three: "./books/Book3.bin"
   Human: "./books/Titans.bin"
+
 
 
 
