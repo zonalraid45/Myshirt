@@ -123,6 +123,9 @@ opening_books:
     3+0:                             # Blitz games (5+3)
       selection: best_move 
       names:
+        - One
+        - Two
+        - Three
         - draw
         - probook
         - nimas
@@ -414,6 +417,7 @@ books:
   One: "./books/Book1.bin"
   Two: "./books/Book2.bin"
   Three: "./books/Book3.bin"
+
 
 
 
