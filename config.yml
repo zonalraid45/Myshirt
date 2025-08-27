@@ -41,7 +41,7 @@ engines:
   #    depth: 35                           # Deep search for standard games.
   #    nodes: 8000000                      # High node count for thorough analysis.
 
-  standard:                               # Engine used for standard chess and when no suitable special engine is configured.
+  standard_human:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
@@ -437,6 +437,7 @@ books:
   One: "./books/Book1.bin"
   Two: "./books/Book2.bin"
   Three: "./books/Book3.bin"
+
 
 
 
