@@ -123,16 +123,16 @@ opening_books:
     3+0:                             # Blitz games (5+3)
       selection: best_move 
       names:
+        - Draw
         - One
         - Two
-        - Three
-        - draw
+        - Three 
         - probook
         - nimas
     standard:                           
       selection: best_move
       names:
-        - draw
+        - Draw
         - nimas
         - probook
     antichess_white:
@@ -228,10 +228,13 @@ opening_books:
     blitz_tournament:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
-      names:                              # List of names of books to use if there is no specific book for the time control, white, black or chess960.
+      names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
+        - Draw
         - One
         - Two
-        - Three
+        - Three 
+        - probook
+        - nimas
 #   Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black', '_human' and/or '_tournament' to use the book only as the specific color, against humans or in tournaments.
@@ -413,10 +416,11 @@ books:
   black3check: "./books/black3check.bin"
   small: "./books/small.bin"
   nimas: "./books/nimas.bin"
-  draw: "./books/draw.bin"
+  Draw: "./books/draw.bin"
   One: "./books/Book1.bin"
   Two: "./books/Book2.bin"
   Three: "./books/Book3.bin"
+
 
 
 
