@@ -137,16 +137,7 @@ opening_books:
         - small
         - nimas
         - probook
-    3+0:                             # Blitz games (5+3)
-      selection: weighted_random 
-      names:
-        - Scorpion
-        - Draw
-        - One
-        - Two
-        - Three 
-        - probook
-        - nimas
+    
     standard:                           
       selection: best_move
       names:
@@ -447,6 +438,7 @@ books:
   Three: "./books/Book3.bin"
   Human: "./books/Titans.bin"
   Scorpion: "./books/Scorpion.bin"
+
 
 
 
