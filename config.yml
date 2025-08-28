@@ -34,12 +34,12 @@ engines:
     move_overhead_multiplier: 24.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
-      Hash: 4000                           # Massive hash for deep calculation.
+      Hash: 2248                           # Massive hash for deep calculation.
       Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:    
       time: 2.0
-  #    depth: 35                           # Deep search for standard games.
-  #    nodes: 8000000                      # High node count for thorough analysis.
+      depth: 25                           # Deep search for standard games.
+      nodes: 4000000                      # High node count for thorough analysis.
 
   standard_human:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
@@ -443,3 +443,4 @@ books:
   Three: "./books/Book3.bin"
   Human: "./books/Titans.bin"
   Scorpion: "./books/Scorpion.bin"
+
