@@ -138,8 +138,9 @@ opening_books:
         - nimas
         - probook
     3+0:                             # Blitz games (5+3)
-      selection: best_move 
+      selection: weighted_random 
       names:
+        - Scorpion
         - Draw
         - One
         - Two
@@ -248,6 +249,7 @@ opening_books:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
+        - Scorpion
         - Draw
         - One
         - Two
@@ -309,7 +311,7 @@ offer_draw:
 # min_rating: 2300                        # Minimum rating of opponent to offer draw.
 
 resign:
-  enabled: true                          # Enable resignation to avoid hopeless positions.
+  enabled: false                          # Enable resignation to avoid hopeless positions.
   score: -800                            # Resign when clearly losing (8 pawns down).
   consecutive_moves: 8                    # More moves to confirm truly lost position.
   against_humans: false                    # Never resign against humans - fight till the end.
@@ -363,7 +365,7 @@ challenge:                                # Incoming challenges.
     - 25+0
   bot_modes:                              # Game modes to accept against BOTs.
     - casual                              # Unrated games (accept casual games even if they don't meet min rating diff)
-    - rated                               # Rated games
+  # - rated                               # Rated games
   human_modes:                            # Game modes to accept against humans.
     - casual                              # Unrated games.
     - rated                               # Rated games
@@ -440,26 +442,4 @@ books:
   Two: "./books/Book2.bin"
   Three: "./books/Book3.bin"
   Human: "./books/Titans.bin"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  Scorpion: "./books/Scorpion.bin"
