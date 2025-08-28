@@ -256,7 +256,7 @@ opening_books:
         - Three 
         - probook
         - nimas
-    3+0_Exogenetic-Bot_white:
+    3+0_exogenetic-bot_white:
       selection: best_move
       names:
         - nimas    
@@ -447,6 +447,7 @@ books:
   Three: "./books/Book3.bin"
   Human: "./books/Titans.bin"
   Scorpion: "./books/Scorpion.bin"
+
 
 
 
