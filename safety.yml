@@ -274,7 +274,6 @@ opening_books:
     3+0_endogenetic-bot:
       selection: best_move
       names:
-        - probook
         - Scorpion    
 #   Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
