@@ -56,7 +56,21 @@ engines:
   #    depth: 35                           # Deep search for standard games.
   #    nodes: 8000000                      # High node count for thorough analysis.
 
-  
+  blitz_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
+    dir: "./engines"                      # Directory containing the engine.
+    name: "stockfish"                     # Binary name of the engine to use.
+    ponder: true                          # Think on opponent's time.
+    silence_stderr: false                 # Suppresses stderr output.
+    move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    uci_options:                          # Arbitrary UCI options passed to the engine.
+      Threads: 4                          # Maximum Threadripper power for longer games.
+      Hash: 2248                           # Massive hash for deep calculation.
+      Move Overhead: 100                  # Increase if your bot flags games too often.
+    limits:    
+      time: 1.0
+      depth: 25                           # Deep search for standard games.
+      nodes: 4000000
+      
   variants:                               # Engine used for variants when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "fsf"           # Binary name of the engine to use. (You need to download Fairy-Stockfish and place it in the engines directory)
@@ -448,5 +462,6 @@ books:
   Human: "./books/Titans.bin"
   Scorpion: "./books/Scorpion.bin"
   Exoendo: "./books/exendo.bin"
+
 
 
