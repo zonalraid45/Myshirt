@@ -46,11 +46,11 @@ engines:
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 53.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 2248                           # Massive hash for deep calculation.
-      Move Overhead: 200                  # Increase if your bot flags games too often.
+      Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:    
       time: 1.0
       depth: 25                           # Deep search for standard games.
@@ -274,6 +274,7 @@ opening_books:
     3+0_endogenetic-bot:
       selection: best_move
       names:
+        - probook
         - Scorpion    
 #   Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
