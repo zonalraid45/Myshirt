@@ -273,6 +273,7 @@ opening_books:
     3+0_exogenetic-bot:
       selection: best_move
       names:
+        - probook
         - Scorpion    
 #   Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
@@ -462,6 +463,7 @@ books:
   Human: "./books/Titans.bin"
   Scorpion: "./books/Scorpion.bin"
   Exoendo: "./books/exendo.bin"
+
 
 
 
