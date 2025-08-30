@@ -446,7 +446,7 @@ books:
   Gukesh: "./masterbooks/Gukesh.bin"         # Gukesh's opening book
   Nakamura: "./masterbooks/Nakamura.bin"     # Nakamura's opening book
   Nepomniachtchi: "./masterbooks/Nepomniachtchi.bin"  # Nepomniachtchi's opening book
-  probook: "./books/probook.bin"
+  Shades: "./books/probook.bin"
   whiteanti: "./books/whiteanti.bin"
   blackanti: "./books/blackanti.bin"
   blackrk: "./books/blackrk.bin"
