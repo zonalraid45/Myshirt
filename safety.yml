@@ -137,21 +137,21 @@ opening_books:
       names:
         - small
         - nimas
-        - probook
+        - Shades
     bullet_white:                            # Other bullet games (1+0)
       selection: best_move 
   #   max_depth: 20                    # Limit book depth so engine evaluates positions
       names:
         - small
         - nimas
-        - probook
+        - Shades
     bullet_black:                            # Aggressive black bullet setup
       selection: best_move                # Always play strongest moves as black
     # max_depth: 15                    # Deeper book usage for black preparation
       names:
         - small
         - nimas
-        - probook
+        - Shades
     3+0:                             # Blitz games (5+3)
       selection: weighted_random 
       names:
@@ -160,14 +160,14 @@ opening_books:
         - One
         - Two
         - Three 
-        - probook
+        - Shades
         - nimas
     standard:                           
       selection: best_move
       names:
         - Draw
         - nimas
-        - probook
+        - Shades
     antichess_white:
       selection: best_move
       names:
@@ -260,7 +260,7 @@ opening_books:
         - Gukesh
         - Nakamura
         - Nepomniachtchi
-    blitz_tournament:
+    3+0_white_tournament:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
@@ -269,19 +269,17 @@ opening_books:
         - One
         - Two
         - Three 
-        - probook
+        - Shades
         - nimas
-    3+0_endogenetic-bot:
-      selection: weighted_random
-      names:
-        - Exoendo
+    3+0_black_tournament:
+      selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+#     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
+      names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
+        - Shades
         - Scorpion
-        - Draw
-        - One
         - Two
-        - Three 
-        - probook
-        - nimas    
+        - Three
+        - nimas
 #   Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black', '_human' and/or '_tournament' to use the book only as the specific color, against humans or in tournaments.
@@ -463,12 +461,12 @@ books:
   black3check: "./books/black3check.bin"
   small: "./books/small.bin"
   nimas: "./books/nimas.bin"
-  Draw: "./books/draw.bin"
+  Draw: "./books/Book3.bin"
   One: "./books/Book1.bin"
-  Two: "./books/Book2.bin"
-  Three: "./books/Book3.bin"
+  Two: "./books/Scorpion.bin"
+  Three: "./books/draw.bin"
   Human: "./books/Titans.bin"
-  Scorpion: "./books/Scorpion.bin"
+  Scorpion: "./books/Book2.bin"
   Exoendo: "./books/exendo.bin"
 
 
