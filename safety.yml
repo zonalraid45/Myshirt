@@ -38,8 +38,8 @@ engines:
       Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:    
       time: 2.0
-      depth: 24                           # Deep search for standard games.
-      nodes: 3500000                      # High node count for thorough analysis.
+      depth: 26                           # Deep search for standard games.
+      nodes: 4100000                      # High node count for thorough analysis.
  
   blitz_endogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
