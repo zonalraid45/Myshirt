@@ -270,7 +270,6 @@ opening_books:
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
         - Exoendo
-        - Shades
 #   Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black', '_human' and/or '_tournament' to use the book only as the specific color, against humans or in tournaments.
@@ -459,6 +458,7 @@ books:
   Human: "./books/Titans.bin"
   Scorpion: "./books/Book2.bin"
   Exoendo: "./books/exendo.bin"
+
 
 
 
