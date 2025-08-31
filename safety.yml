@@ -38,8 +38,8 @@ engines:
       Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:    
       time: 2.0
-      depth: 26                           # Deep search for standard games.
-      nodes: 4100000                      # High node count for thorough analysis.
+      depth: 25                           # Deep search for standard games.
+      nodes: 4000000                      # High node count for thorough analysis.
  
   blitz_endogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
@@ -152,6 +152,29 @@ opening_books:
         - small
         - nimas
         - Shades
+    3+0_fayefish_white:                             # Blitz games (5+3)
+      selection: weighted_random 
+      names:
+        - Exoendo
+        - Scorpion
+        - Draw
+        - One
+        - Two
+        - Three 
+        - Shades
+        - nimas
+    3+0_fayefish_black:                             # Blitz games (5+3)
+      selection: weighted_random 
+      names:
+        - Scorpion
+        - Draw
+        - One
+        - Two
+        - Three 
+        - Shades
+        - nimas
+
+
     standard:                           
       selection: best_move
       names:
@@ -250,16 +273,18 @@ opening_books:
         - Gukesh
         - Nakamura
         - Nepomniachtchi
-    3+0_white_tournament:
+    3+0_white:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
         - Exoendo
-    3+0_black_tournament:
+    3+0_black:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
-        - Exoendo
+        - One
+        - Two
+        - Three
 #   Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black', '_human' and/or '_tournament' to use the book only as the specific color, against humans or in tournaments.
@@ -441,12 +466,19 @@ books:
   black3check: "./books/black3check.bin"
   small: "./books/small.bin"
   nimas: "./books/nimas.bin"
-  Draw: "./books/Book3.bin"
+  Draw: "./books/draw.bin"
   One: "./books/Book1.bin"
-  Two: "./books/Scorpion.bin"
-  Three: "./books/draw.bin"
+  Two: "./books/Book2.bin"
+  Three: "./books/Book3.bin"
   Human: "./books/Titans.bin"
-  Scorpion: "./books/Book2.bin"
+  Scorpion: "./books/Scorpion.bin"
   Exoendo: "./books/exendo.bin"
+
+
+
+
+
+
+
 
 
