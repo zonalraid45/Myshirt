@@ -25,7 +25,22 @@ engines:
       Hash: 2508                           # Max memory (in megabytes) the engine can allocate.
       Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:
-    
+
+  bullet_tournament:                               # Engine used for standard chess and when no suitable special engine is configured.
+    dir: "./engines"                      # Directory containing the engine.
+    name: "stockfish"                     # Binary name of the engine to use.
+    ponder: true                          # Think on opponent's time.
+    silence_stderr: false                 # Suppresses stderr output.
+    move_overhead_multiplier: 24.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    uci_options:                          # Arbitrary UCI options passed to the engine.
+      Threads: 4                          # Maximum Threadripper power for longer games.
+      Hash: 2248                           # Massive hash for deep calculation.
+      Move Overhead: 100                  # Increase if your bot flags games too often.
+    limits:    
+      time: 2.0
+      depth: 25                           # Deep search for standard games.
+      nodes: 4000000
+      
   standard:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
@@ -41,7 +56,7 @@ engines:
       depth: 25                           # Deep search for standard games.
       nodes: 4000000                      # High node count for thorough analysis.
  
-  blitz_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
+  standard_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
@@ -131,28 +146,8 @@ opening_books:
 #     selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     names:                              # List of names of books to use as black.
 #       - BlackBook
-    0.5+0:                          # 30 sec bullet games (0.5+0)
-      selection: best_move
-    # max_depth: 20                    # Limit book depth so engine evaluates positions
-      names:
-        - small
-        - nimas
-        - Shades
-    bullet_white:                            # Other bullet games (1+0)
-      selection: best_move 
-  #   max_depth: 20                    # Limit book depth so engine evaluates positions
-      names:
-        - small
-        - nimas
-        - Shades
-    bullet_black:                            # Aggressive black bullet setup
-      selection: best_move                # Always play strongest moves as black
-    # max_depth: 15                    # Deeper book usage for black preparation
-      names:
-        - small
-        - nimas
-        - Shades
-    3+0_fayefish_white:                             # Blitz games (5+3)
+   
+    standard_fayefish_white:                             # Blitz games (5+3)
       selection: weighted_random 
       names:
         - Exoendo
@@ -163,7 +158,7 @@ opening_books:
         - Three 
         - Shades
         - nimas
-    3+0_fayefish_black:                             # Blitz games (5+3)
+    standard_fayefish_black:                             # Blitz games (5+3)
       selection: weighted_random 
       names:
         - Scorpion
@@ -273,12 +268,12 @@ opening_books:
         - Gukesh
         - Nakamura
         - Nepomniachtchi
-    3+0_white:
+    standard_white:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
         - Exoendo
-    3+0_black:
+    standard_black:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
