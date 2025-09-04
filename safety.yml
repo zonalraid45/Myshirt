@@ -142,10 +142,10 @@ opening_books:
 #     names:                              # List of names of books to use in bullet.
 #       - BulletBook
 #       - DefaultBook
-#   standard_black:
-#     selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-#     names:                              # List of names of books to use as black.
-#       - BlackBook
+    standard_endogenetic-bot:
+      selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      names:                              # List of names of books to use as black.
+        - Four
    
     standard_fayefish_white:                             # Blitz games (5+3)
       selection: weighted_random 
@@ -468,7 +468,9 @@ books:
   Human: "./books/Titans.bin"
   Scorpion: "./books/Scorpion.bin"
   Exoendo: "./books/exendo.bin"
-
+  Four: "./books/h.bin"
+  Indi: "./books/I.bin"
+  Jely: "./books/j.bin"
 
 
 
