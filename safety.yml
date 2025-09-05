@@ -143,7 +143,7 @@ opening_books:
 #       - BulletBook
 #       - DefaultBook
     3+0_endogenetic-bot:
-      selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
         - Four
     standard_fayefish_white:                             # Blitz games (5+3)
