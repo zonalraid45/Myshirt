@@ -157,7 +157,7 @@ opening_books:
     standard:                           
       selection: weighted_random
       names:
-        - probook
+        - Shades
     3+0_endogenetic-bot_white:
       selection: weighted_random 
       names:
