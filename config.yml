@@ -142,11 +142,7 @@ opening_books:
 #     names:                              # List of names of books to use in bullet.
 #       - BulletBook
 #       - DefaultBook
-    standard_exogenetic-bot_white:
-      selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-      names:                              # List of names of books to use as black.
-        - Four
-    standard_exogenetic-bot_black:
+    3+0_exogenetic-bot:
       selection: best_move                # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
         - Four
@@ -475,6 +471,7 @@ books:
   Four: "./books/h.bin"
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
+
 
 
 
