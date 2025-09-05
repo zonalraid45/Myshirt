@@ -143,7 +143,7 @@ opening_books:
 #       - BulletBook
 #       - DefaultBook
     3+0_endogenetic-bot:
-      selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      selection: best_move         # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
         - Four
     standard_fayefish_white:                             # Blitz games (5+3)
@@ -327,7 +327,7 @@ offer_draw:
   enabled: true                           # Activate whether the bot should offer draw.
   score: 10                                # Tighter draw threshold - only accept truly equal positions.
   consecutive_moves: 10                   # More moves required before considering draw.
-  min_game_length: 30                     # Later draw offers to avoid early draws.
+  min_game_length: 31                     # Later draw offers to avoid early draws.
   against_humans: false                    # Activate whether these settings should apply against humans.
   allow_in_tournaments: true             # Allow offering draws in tournaments even for 0.5+0 games. By default, draws are never offered in 0.5+0 games.
   accept_30_second_draws: true          
