@@ -142,6 +142,14 @@ opening_books:
 #     names:                              # List of names of books to use in bullet.
 #       - BulletBook
 #       - DefaultBook
+    3+0_bstaf_black:
+      selection: best_move
+      names:
+        - Jely
+    3+0_bstaf_white:
+      selection: best_move
+      names:
+        - Indi
     3+0_endogenetic-bot:
       selection: best_move         # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
