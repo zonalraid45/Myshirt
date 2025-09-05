@@ -380,6 +380,19 @@ class Lichess_Game:
         suffixes.append('white' if self.is_white else 'black')  
           
         def check_book_key(base_name: str) -> str | None:
+            if opponent_name:  
+                exact_key = f'{base_name}_{opponent_name.lower()}'  
+                if exact_key in self.config.opening_books.books:  
+                    return exact_key  
+      
+    # Then check for multi-player keys (like standard_a_b)  
+            if opponent_name:  
+                for book_key in self.config.opening_books.books.keys():  
+                    if book_key.startswith(f'{base_name}_'):  
+                        suffix = book_key[len(base_name)+1:]  
+                        player_names = suffix.split('_')  
+                        if opponent_name.lower() in player_names:  
+                            return book_key
             for i in range(len(suffixes), -1, -1):
                 for p in itertools.permutations(suffixes, i):
                     key = f'{base_name}_{"_".join(p)}' if p else base_name
