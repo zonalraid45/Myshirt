@@ -368,7 +368,6 @@ class Lichess_Game:
                              book_readers)
 
     def _get_book_key(self) -> str | None:
-        opponent_name = self.game_info.black_name if self.is_white else self.game_info.white_name  
         suffixes: list[str] = []
         if self.game_info.white_title == 'BOT' and self.game_info.black_title == 'BOT':
             suffixes.append('bot')
@@ -376,9 +375,9 @@ class Lichess_Game:
             suffixes.append('human')
         if self.game_info.tournament_id is not None:
             suffixes.append('tournament')
-        suffixes.append('white' if self.is_white else 'black')
-        if opponent_name:  
-            suffixes.append(opponent_name.lower())  
+        opponent_name = self.game_info.black_name if self.is_white else self.game_info.white_name  
+        suffixes.append(opponent_name.lower())  
+        suffixes.append('white' if self.is_white else 'black')  
           
         def check_book_key(base_name: str) -> str | None:
             for i in range(len(suffixes), -1, -1):
