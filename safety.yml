@@ -491,7 +491,7 @@ books:
   Four: "./books/h.bin"
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
-  rbsmall: "./engines/rbsmall.bin"
+  rbsmall: "./books/rbsmall.bin"
 
 
 
