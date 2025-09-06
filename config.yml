@@ -61,7 +61,7 @@ engines:
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 42.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 2248                           # Massive hash for deep calculation.
@@ -76,7 +76,7 @@ engines:
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 42.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 2248                           # Massive hash for deep calculation.
@@ -90,7 +90,7 @@ engines:
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 42.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 2248                           # Massive hash for deep calculation.
@@ -540,6 +540,7 @@ books:
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
+
 
 
 
