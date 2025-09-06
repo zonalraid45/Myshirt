@@ -67,7 +67,7 @@ engines:
       Hash: 2248                           # Massive hash for deep calculation.
       Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:    
-      time: 1.0
+      time: 0.8
       depth: 25                           # Deep search for standard games.
       nodes: 4000000
   standard_endogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
