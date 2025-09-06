@@ -66,6 +66,49 @@ engines:
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 2248                           # Massive hash for deep calculation.
       Move Overhead: 100                  # Increase if your bot flags games too often.
+                    # Increase if your bot flags games too often.
+    limits:    
+      time: 0.5
+      depth: 25                           # Deep search for standard games.
+      nodes: 4000000
+  standard_maggichess16:                               # Engine used for standard chess and when no suitable special engine is configured.
+    dir: "./engines"                      # Directory containing the engine.
+    name: "stockfish"                     # Binary name of the engine to use.
+    ponder: true                          # Think on opponent's time.
+    silence_stderr: false                 # Suppresses stderr output.
+    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    uci_options:                          # Arbitrary UCI options passed to the engine.
+      Threads: 4                          # Maximum Threadripper power for longer games.
+      Hash: 2248                           # Massive hash for deep calculation.
+      Move Overhead: 100                  # Increase if your bot flags games too often.
+    limits:    
+      time: 0.5
+      depth: 25                           # Deep search for standard games.
+      nodes: 4000000
+  standard_yuki_1324:                               # Engine used for standard chess and when no suitable special engine is configured.
+    dir: "./engines"                      # Directory containing the engine.
+    name: "stockfish"                     # Binary name of the engine to use.
+    ponder: true                          # Think on opponent's time.
+    silence_stderr: false                 # Suppresses stderr output.
+    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    uci_options:                          # Arbitrary UCI options passed to the engine.
+      Threads: 4                          # Maximum Threadripper power for longer games.
+      Hash: 2248                           # Massive hash for deep calculation.
+      Move Overhead: 100                  # Increase if your bot flags games too often.
+    limits:    
+      time: 0.5
+      depth: 25                           # Deep search for standard games.
+      nodes: 4000000
+  standard_strain-on-veins:                               # Engine used for standard chess and when no suitable special engine is configured.
+    dir: "./engines"                      # Directory containing the engine.
+    name: "stockfish"                     # Binary name of the engine to use.
+    ponder: true                          # Think on opponent's time.
+    silence_stderr: false                 # Suppresses stderr output.
+    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    uci_options:                          # Arbitrary UCI options passed to the engine.
+      Threads: 4                          # Maximum Threadripper power for longer games.
+      Hash: 2248                           # Massive hash for deep calculation.
+      Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:    
       time: 0.5
       depth: 25                           # Deep search for standard games.
@@ -84,6 +127,7 @@ engines:
       time: 1.0
       depth: 25                           # Deep search for standard games.
       nodes: 4000000
+      
   standard_human:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
@@ -154,17 +198,17 @@ opening_books:
 #     selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     names:                              # List of names of books to use in bullet.
 #       - BulletBook
-#       - DefaultBook
-    3+0_bstaf_black:
-      selection: best_move
-      names:
-        - Jely
-    3+0_bstaf_white:
-      selection: best_move
-      names:
-        - Indi
+#       - Defaulmove_overhead_mnd
     3+0_endogenetic-bot:
-      selection: best_move         # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      selection: best_move             # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      names:                              # List of names of books to use as black.
+        - rbsmall
+    3+0_maggichess16:
+      selection: best_move             # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      names:                              # List of names of books to use as black.
+        - rbsmall
+    3+0_nnue_drift:
+      selection: best_move             # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
         - rbsmall
     standard_fayefish_white:                             # Blitz games (5+3)
@@ -492,6 +536,14 @@ books:
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
+
+
+
+
+
+
+
+
 
 
 
