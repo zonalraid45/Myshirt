@@ -1,4 +1,4 @@
-    token: "TokenTimeIsBackBuddyss"         # Lichess OAuth2 Token.
+token: "TokenTimeIsBackBuddyss"         # Lichess OAuth2 Token.
 
 engines:
   bullet:                               # Engine used for standard chess and when no suitable special engine is configured.
@@ -536,6 +536,7 @@ books:
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
+
 
 
 
