@@ -181,7 +181,7 @@ syzygy:
     max_pieces: 7        # Count of max pieces in the local syzygy endgame tablebases.
     instant_play: true
   3check:
-    enable: true
+    enabled: true
     paths:
       - "./syzygy"
     max_pieces: 7
