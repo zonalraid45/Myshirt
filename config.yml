@@ -151,7 +151,7 @@ engines:
     name: "fsf"           # Binary name of the engine to use. (You need to download Fairy-Stockfish and place it in the engines directory)
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 1.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 18.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # High thread count for variants.
       Hash: 3000                           # Large hash for variant calculations.
@@ -177,6 +177,12 @@ syzygy:
     paths:
       - "./syzygy"
     max_pieces: 7
+    instant_play: true
+  3check:   
+    enabled: true                      # Activate local syzygy endgame tablebases.
+    paths:                                # Paths to local syzygy endgame tablebases.
+      - "./syzygy"
+    max_pieces: 7                         # Count of max pieces in the local syzygy endgame tablebases.
     instant_play: true
   antichess:
     enabled: false                        # Activate local syzygy endgame tablebases.
@@ -260,10 +266,6 @@ opening_books:
       selection: best_move
       names:
         - blackanti
-    3check_white:
-      selection: best_move
-      names:
-        - white3check
     kingofthehill_black:
       selection: best_move
       names:
@@ -297,10 +299,6 @@ opening_books:
       selection: best_move
       names:
         - blackrk
-    3check_black:
-      selection: best_move
-      names:
-        - black3check    
     standard_human:
       selection: weighted_random
       random_selection: false
@@ -545,6 +543,7 @@ books:
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
+
 
 
 
