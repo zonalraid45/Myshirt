@@ -204,7 +204,7 @@ gaviota:
   max_pieces: 5                           # Count of max pieces in the local gaviota endgame tablebases.
 
 opening_books:
-  enabled: false                           # Activate opening books.
+  enabled: true                        # Activate opening books.
   priority: 1000                           # Priority with which this move source is used. Higher priority is used first.
   read_learn: false                       # Whether to read the learn values from the books.
   books:
@@ -266,14 +266,6 @@ opening_books:
       selection: best_move
       names:
         - blackanti
-    kingofthehill_black:
-      selection: best_move
-      names:
-        - blackkingofhill
-    kingofthehill_white:
-      selection: best_move
-      names:
-        - whitekingofhill
     atomic_white:
       selection: best_move
       names:
@@ -283,22 +275,6 @@ opening_books:
       selection: best_move
       names:
         - chess960
-    atomic_black:
-      selection: best_move
-      names:
-        - blackatomic
-    horde:
-      selection: best_move
-      names:
-        - horde
-    racingkings_white_human:
-      selection: best_move
-      names:
-        - whiterk
-    racingkings_black_human:
-      selection: best_move
-      names:
-        - blackrk
     standard_human:
       selection: weighted_random
       random_selection: false
@@ -543,6 +519,7 @@ books:
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
+
 
 
 
