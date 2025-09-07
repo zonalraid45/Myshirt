@@ -150,7 +150,7 @@ engines:
     name: "fsf"           # Binary name of the engine to use. (You need to download Fairy-Stockfish and place it in the engines directory)
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 12.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # High thread count for variants.
       Hash: 3000                           # Large hash for variant calculations.
@@ -158,7 +158,7 @@ engines:
       Use NNUE: true
       EvalFile: "3check-cb5f517c228b.nnue:antichess-dd3cbe53cd4e.nnue:atomic-2cf13ff256cc.nnue:crazyhouse-8ebf84784ad2.nnue:horde-28173ddccabe.nnue:kingofthehill-978b86d0e6a4.nnue:racingkings-636b95f085e3.nnue"
     limits:   # Limits that end the move calculation early.
-      time: 2.0
+      time: 10.0
   #    depth: 30                           # Deep variant search.
  #     nodes: 6000000                      # High node count for variants.
 # Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
