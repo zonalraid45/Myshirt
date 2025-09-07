@@ -25,7 +25,9 @@ engines:
       Hash: 2508                           # Max memory (in megabytes) the engine can allocate.
       Move Overhead: 100                  # Increase if your bot flags games too often.
     limits:
-   #   time: 2.0
+      time: 4.0
+      depth: 30
+      nodes: 6000000
 
   bullet_tournament:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
