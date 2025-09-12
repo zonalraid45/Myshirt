@@ -261,11 +261,11 @@ opening_books:
     antichess_white:
       selection: best_move
       names:
-        - whiteanti
+        - polish
     antichess_black:
       selection: best_move
       names:
-        - blackanti
+        - polish
     atomic_white:
       selection: best_move
       names:
@@ -333,7 +333,7 @@ opening_books:
 
 online_moves:
   opening_explorer:
-    enabled: true                        # Activate online moves from Lichess opening explorer. The move that has performed best for this bot is played.
+    enabled: false                        # Activate online moves from Lichess opening explorer. The move that has performed best for this bot is played.
     priority: 300                         # Priority with which this move source is used. Higher priority is used first.
 #   player: Username                      # Player whose Lichess opening explorer should be used. Comment this to use your own or with anti your opponent's.
     only_without_book: false              # Whether the Lichess opening explorer should only be used if there is no matching book.
@@ -519,6 +519,7 @@ books:
   Indi: "./books/I.bin"
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
+  polish: "./books/polish.bin"
 
 
 
