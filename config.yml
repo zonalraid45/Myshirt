@@ -213,19 +213,19 @@ opening_books:
 #     names:                              # List of names of books to use in bullet.
 #       - BulletBook
 #       - DefaultBook
-    3+0_exogenetic-bot:
+    standard_exogenetic-bot:
       selection: best_move             # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
         - rbsmall
-    3+0_yuki_1324:
+    standard_yuki_1324:
        selection: best_move 
        names:
          - rbsmall
-    3+0_maggichess16:
+    standard_maggichess16:
       selection: best_move             # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
         - rbsmall
-    3+0_nnue_drift:
+    standard_nnue_drift:
       selection: best_move             # Move selection is one of "weighted_random", "uniform_random" or "best_move".
       names:                              # List of names of books to use as black.
         - rbsmall
@@ -259,11 +259,11 @@ opening_books:
         - nimas
         - Shades
     antichess_white:
-      selection: best_move
+      selection: weighted_random 
       names:
         - polish
     antichess_black:
-      selection: best_move
+      selection: weighted_random
       names:
         - polish
     atomic_white:
@@ -520,6 +520,7 @@ books:
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
+
 
 
 
