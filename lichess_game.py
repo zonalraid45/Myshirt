@@ -111,6 +111,9 @@ class Lichess_Game:
                     return key
 
             else:
+                if game_info.variant == Variant.FROM_POSITION:  
+                    if key := check_engine_key('fromposition'):  
+                        return key
                 if key := check_engine_key(game_info.tc_str):
                     return key
 
