@@ -430,7 +430,9 @@ messages:
   #   {ram} to insert RAM size
   # Any other words in curly braces will be removed.
   greeting: "Hello {opponent}! Good luck and have fun! Type !help for a list of commands."
-  goodbye: "Thank you for the game, {opponent}!"
+  win_message: "Great game! Another well victory for me,see you in next game till then goodbye."  
+  draw_message: "Well played! That was an interesting game."  
+  loss_message: "Good game! You really played well.I shouldn't had made that blunder."
   greeting_spectators: "Welcome spectators! Type !help for a list of commands."
   goodbye_spectators: "Thank you all for watching!"
 
