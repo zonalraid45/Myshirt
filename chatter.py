@@ -3,6 +3,7 @@ import platform
 import time
 import asyncio
 from collections import defaultdict
+from typing import Any
 
 import chess
 
