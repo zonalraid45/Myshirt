@@ -416,7 +416,9 @@ messages:
   #   {ram} to insert RAM size
   # Any other words in curly braces will be removed.
   greeting: "Hello {opponent}! Good luck and have fun! Type !help for a list of commands."
-  goodbye: "Thank you for the game, {opponent}!"
+  win_message: "Great game! I was fortunate to win this one."  
+  draw_message: "Well played! A fair result."  
+  loss_message: "Good game! You played better than me."
   greeting_spectators: "Welcome spectators! Type !help for a list of commands."
   goodbye_spectators: "Thank you all for watching!"
 
@@ -466,6 +468,7 @@ books:
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
+
 
 
 
