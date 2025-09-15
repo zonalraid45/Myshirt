@@ -173,6 +173,8 @@ class Matchmaking_Config:
 @dataclass
 class Messages_Config:
     greeting: str | None
-    goodbye: str | None
+    win_message: str | None  
+    draw_message: str | None  
+    loss_message: str | None
     greeting_spectators: str | None
     goodbye_spectators: str | None

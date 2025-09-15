@@ -36,8 +36,8 @@ class Game:
         self._print_game_information(info)
 
         if info.state['status'] != 'started':
-            self._print_result_message(info.state, lichess_game, info)
-            await chatter.send_goodbyes()
+            self._print_result_message(info.state, lichess_game, info)  
+            await chatter.send_outcome_goodbyes(info.state, info)
             await lichess_game.close()
             return
 
@@ -113,8 +113,8 @@ class Game:
                 if self.move_task:
                     self.move_task.cancel()
 
-                self._print_result_message(event, lichess_game, info)
-                await chatter.send_goodbyes()
+                self._print_result_message(event, lichess_game, info)  
+                await chatter.send_outcome_goodbyes(event, info)  
                 break
 
             if has_updated:
