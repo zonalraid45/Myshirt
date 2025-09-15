@@ -33,7 +33,9 @@ class Chatter:
         self.name_message = self._get_name_message(config.version)
         self.ram_message = self._get_ram()
         self.player_greeting = self._format_message(config.messages.greeting)
-        self.player_goodbye = self._format_message(config.messages.goodbye)
+        self.player_win_message = self._format_message(config.messages.win_message)  
+        self.player_draw_message = self._format_message(config.messages.draw_message)  
+        self.player_loss_message = self._format_message(config.messages.loss_message)
         self.spectator_greeting = self._format_message(config.messages.greeting_spectators)
         self.spectator_goodbye = self._format_message(config.messages.goodbye_spectators)
         self.print_eval_rooms: set[str] = set()
@@ -74,16 +76,30 @@ class Chatter:
         if self.spectator_greeting:
             await self.api.send_chat_message(self.game_info.id_, 'spectator', self.spectator_greeting)
 
-    async def send_goodbyes(self) -> None:
-        if self.lichess_game.is_abortable:
-            return
-
-        if self.player_goodbye:
-            await self.api.send_chat_message(self.game_info.id_, 'player', self.player_goodbye)
-
-        if self.spectator_goodbye:
-            await self.api.send_chat_message(self.game_info.id_, 'spectator', self.spectator_goodbye)
-
+ 
+    async def send_outcome_goodbyes(self, game_state: dict[str, Any], game_info: Game_Information) -> None:  
+        if self.lichess_game.is_abortable:  
+            return  
+  
+        player_message = self._get_outcome_message(game_state)  
+      
+        if player_message:  
+            await self.api.send_chat_message(game_info.id_, 'player', player_message)  
+  
+        if self.spectator_goodbye:  
+            await self.api.send_chat_message(game_info.id_, 'spectator', self.spectator_goodbye)  
+  
+    def _get_outcome_message(self, game_state: dict[str, Any]) -> str | None:  
+        if winner := game_state.get('winner'):  
+        # Someone won the game  
+            if (winner == 'white' and self.lichess_game.is_white) or (winner == 'black' and not self.lichess_game.is_white):  
+            # We won  
+                return self.player_win_message  
+            else:  
+            # We lost  
+                return self.player_loss_message  
+        else:  
+            return self.player_draw_message
     async def send_abortion_message(self) -> None:
         await self.api.send_chat_message(self.game_info.id_, 'player', ('Too bad you weren\'t there. '
                                                                         'Feel free to challenge me again, '
