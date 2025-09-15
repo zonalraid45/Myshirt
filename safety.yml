@@ -37,8 +37,8 @@ engines:
     move_overhead_multiplier: 24.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
-      Hash: 2248                           # Massive hash for deep calculation.
-      Move Overhead: 90                  # Increase if your bot flags games too often.
+      Hash: 4448                           # Massive hash for deep calculation.
+      Move Overhead: 20                  # Increase if your bot flags games too often.
     limits:    
       time: 5.0
    #   depth: 25
