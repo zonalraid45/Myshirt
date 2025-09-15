@@ -508,28 +508,32 @@ class Config:
 
 
 
-    @staticmethod
-    def _get_messages_config(messages_section: dict[str, str]) -> Messages_Config:
-        messages_sections = [
-            ['greeting', str, '"greeting" must be a string wrapped in quotes.'],
-            ['goodbye', str, '"goodbye" must be a string wrapped in quotes.'],
-            ['greeting_spectators', str, '"greeting_spectators" must be a string wrapped in quotes.'],
-            ['goodbye_spectators', str, '"goodbye_spectators" must be a string wrapped in quotes.']]
-
-        for subsection in messages_sections:
-            if subsection[0] in messages_section:
-                if not isinstance(messages_section[subsection[0]], subsection[1]):
-                    raise TypeError(f'`messages` subsection {subsection[2]}')
-
-                if messages_section[subsection[0]].strip() == '!printeval':
-                    print(f'Ignoring message "{subsection[0]}": "!printeval" is not allowed in messages.')
-                    del messages_section[messages_section[subsection[0]]]
-
-        return Messages_Config(messages_section.get('greeting'),
-                               messages_section.get('goodbye'),
-                               messages_section.get('greeting_spectators'),
+   
+    @staticmethod  
+    def _get_messages_config(messages_section: dict[str, str]) -> Messages_Config:  
+        messages_sections = [  
+            ['greeting', str, '"greeting" must be a string wrapped in quotes.'],  
+            ['win_message', str, '"win_message" must be a string wrapped in quotes.'],  
+            ['draw_message', str, '"draw_message" must be a string wrapped in quotes.'],  
+            ['loss_message', str, '"loss_message" must be a string wrapped in quotes.'],  
+            ['greeting_spectators', str, '"greeting_spectators" must be a string wrapped in quotes.'],  
+            ['goodbye_spectators', str, '"goodbye_spectators" must be a string wrapped in quotes.']]  
+  
+        for subsection in messages_sections:  
+            if subsection[0] in messages_section:  
+                if not isinstance(messages_section[subsection[0]], subsection[1]):  
+                    raise TypeError(f'`messages` subsection {subsection[2]}')  
+  
+                if messages_section[subsection[0]].strip() == '!printeval':  
+                    print(f'Ignoring message "{subsection[0]}": "!printeval" is not allowed in messages.')  
+                    del messages_section[subsection[0]]  
+  
+        return Messages_Config(messages_section.get('greeting'),  
+                               messages_section.get('win_message'),  
+                               messages_section.get('draw_message'),  
+                               messages_section.get('loss_message'),  
+                               messages_section.get('greeting_spectators'),  
                                messages_section.get('goodbye_spectators'))
-
     @staticmethod
     def _get_version() -> str:
         try:
