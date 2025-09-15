@@ -40,9 +40,9 @@ engines:
       Hash: 2248                           # Massive hash for deep calculation.
       Move Overhead: 90                  # Increase if your bot flags games too often.
     limits:    
-      time: 7.0
-      depth: 25
-      nodes: 4000000
+      time: 5.0
+   #   depth: 25
+   #   nodes: 4000000
       
   standard:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
