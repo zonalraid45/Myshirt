@@ -40,7 +40,7 @@ engines:
       Hash: 4448                           # Massive hash for deep calculation.
       Move Overhead: 10                  # Increase if your bot flags games too often.
     limits:    
-      time: 1.2
+      time: 5.0
    #   depth: 25
    #   nodes: 4000000
       
