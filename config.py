@@ -258,6 +258,7 @@ class Config:
             ['priority', int, '"priority" must be an integer.'],
             ['only_without_book', bool, '"only_without_book" must be a bool.'],
             ['use_for_variants', bool, '"use_for_variants" must be a bool.'],
+            ['disable_for_standard', bool, '"disable_for_standard" must be a bool.'],
             ['min_time', int, '"min_time" must be an integer.'],
             ['timeout', int, '"timeout" must be an integer.'],
             ['min_games', int, '"min_games" must be an integer.'],
@@ -278,6 +279,7 @@ class Config:
                                        opening_explorer_section.get('player'),
                                        opening_explorer_section['only_without_book'],
                                        opening_explorer_section['use_for_variants'],
+                                       opening_explorer_section['disable_for_standard'],
                                        opening_explorer_section['min_time'],
                                        opening_explorer_section['timeout'],
                                        opening_explorer_section['min_games'],
@@ -294,6 +296,7 @@ class Config:
             ['priority', int, '"priority" must be an integer.'],
             ['only_without_book', bool, '"only_without_book" must be a bool.'],
             ['use_for_variants', bool, '"use_for_variants" must be a bool.'],
+            ['disable_for_standard', bool, '"disable_for_standard" must be a bool.']
             ['min_eval_depth', int, '"min_eval_depth" must be an integer.'],
             ['min_time', int, '"min_time" must be an integer.'],
             ['timeout', int, '"timeout" must be an integer.']]
@@ -310,6 +313,7 @@ class Config:
                                     lichess_cloud_section['priority'],
                                     lichess_cloud_section['only_without_book'],
                                     lichess_cloud_section['use_for_variants'],
+                                    lichess_cloud_section['disable_for_standard'],
                                     lichess_cloud_section['min_eval_depth'],
                                     lichess_cloud_section['min_time'],
                                     lichess_cloud_section['timeout'],
