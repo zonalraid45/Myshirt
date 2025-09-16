@@ -63,14 +63,14 @@ engines:
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 22.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 1.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 2248                           # Massive hash for deep calculation.
-      Move Overhead: 40                  # Increase if your bot flags games too often.
+      Move Overhead: 10                  # Increase if your bot flags games too often.
                     # Increase if your bot flags games too often.
     limits:    
-      time: 3.0
+      time: 1.0
   #    depth: 25                           # Deep search for standard games.
  #     nodes: 4000000
   standard_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
@@ -470,6 +470,7 @@ books:
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
+
 
 
 
