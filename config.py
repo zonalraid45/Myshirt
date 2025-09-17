@@ -296,7 +296,7 @@ class Config:
             ['priority', int, '"priority" must be an integer.'],
             ['only_without_book', bool, '"only_without_book" must be a bool.'],
             ['use_for_variants', bool, '"use_for_variants" must be a bool.'],
-            ['disable_for_standard', bool, '"disable_for_standard" must be a bool.']
+            ['disable_for_standard', bool, '"disable_for_standard" must be a bool.'],
             ['min_eval_depth', int, '"min_eval_depth" must be an integer.'],
             ['min_time', int, '"min_time" must be an integer.'],
             ['timeout', int, '"timeout" must be an integer.']]
