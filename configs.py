@@ -58,6 +58,7 @@ class Opening_Explorer_Config:
     only_without_book: bool
     use_for_variants: bool
     disable_for_standard: bool
+    only_fromposition: bool
     min_time: int
     timeout: int
     min_games: int
@@ -75,6 +76,7 @@ class Lichess_Cloud_Config:
     only_without_book: bool
     use_for_variants: bool
     disable_for_standard: bool
+    only_fromposition: bool
     min_eval_depth: int
     min_time: int
     timeout: int
