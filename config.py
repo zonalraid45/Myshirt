@@ -330,6 +330,7 @@ class Config:
             ['enabled', bool, '"enabled" must be a bool.'],
             ['priority', int, '"priority" must be an integer.'],
             ['only_without_book', bool, '"only_without_book" must be a bool.'],
+            ['fromposition', bool, '"fromposition" must be a bool.']
             ['min_candidates', int, '"min_candidates" must be an integer.'],
             ['min_time', int, '"min_time" must be an integer.'],
             ['timeout', int, '"timeout" must be an integer.'],
@@ -346,6 +347,7 @@ class Config:
         return ChessDB_Config(chessdb_section['enabled'],
                               chessdb_section['priority'],
                               chessdb_section['only_without_book'],
+                              chessdb_section['fromposition'],
                               chessdb_section['min_candidates'],
                               chessdb_section['min_time'],
                               chessdb_section['timeout'],
