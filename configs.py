@@ -89,6 +89,7 @@ class ChessDB_Config:
     enabled: bool
     priority: int
     only_without_book: bool
+    fromposition: bool
     min_candidates: int
     min_time: int
     timeout: int
