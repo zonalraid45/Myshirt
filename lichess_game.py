@@ -948,6 +948,10 @@ class Lichess_Game:
             if not opening_explorer_config.only_without_book or not self.book_settings.readers:
                 if opening_explorer_config.disable_for_standard and self.board.uci_variant == 'chess':  
                     pass
+                elif (opening_explorer_config.only_fromposition and   
+                      self.game_info.variant != Variant.FROM_POSITION and   
+                      self.board.uci_variant == 'chess'):  
+                    pass
                 elif self.board.uci_variant == 'chess' or opening_explorer_config.use_for_variants:  
                     opening_sources[self._make_opening_explorer_move] = opening_explorer_config.priority
 
@@ -955,6 +959,10 @@ class Lichess_Game:
             if not self.config.online_moves.lichess_cloud.only_without_book or not self.book_settings.readers:
                 if self.config.online_moves.lichess_cloud.disable_for_standard and self.board.uci_variant == 'chess':  
                     pass
+                elif (self.config.online_moves.lichess_cloud.only_fromposition and   
+                      self.game_info.variant != Variant.FROM_POSITION and   
+                      self.board.uci_variant == 'chess'):
+                    pass  
                 elif self.board.uci_variant == 'chess' or self.config.online_moves.lichess_cloud.use_for_variants:
                     opening_sources[self._make_cloud_move] = self.config.online_moves.lichess_cloud.priority
 
