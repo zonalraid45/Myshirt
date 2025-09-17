@@ -49,7 +49,9 @@ class User_Interface:
             
             account = await self.api.get_account()
             username: str = account['username']
-            print(f'{LOGO} • {self.config.version} • {username}\n')
+            print(f'{LOGO}')  
+            print(f'• Logging as ({username})')  
+            print(f'Version number: {self.config.version}\n')
             self.api.append_user_agent(username)
             await self._handle_bot_status(account.get('title'), allow_upgrade)
             await self._test_engines()
