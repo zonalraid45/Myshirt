@@ -57,6 +57,7 @@ class Opening_Explorer_Config:
     player: str | None
     only_without_book: bool
     use_for_variants: bool
+    disable_for_standard: bool
     min_time: int
     timeout: int
     min_games: int
@@ -73,6 +74,7 @@ class Lichess_Cloud_Config:
     priority: int
     only_without_book: bool
     use_for_variants: bool
+    disable_for_standard: bool
     min_eval_depth: int
     min_time: int
     timeout: int

@@ -946,12 +946,16 @@ class Lichess_Game:
         opening_explorer_config = self.config.online_moves.opening_explorer
         if opening_explorer_config.enabled:
             if not opening_explorer_config.only_without_book or not self.book_settings.readers:
-                if self.board.uci_variant == 'chess' or opening_explorer_config.use_for_variants:
+                if opening_explorer_config.disable_for_standard and self.board.uci_variant == 'chess':  
+                    pass
+                elif self.board.uci_variant == 'chess' or opening_explorer_config.use_for_variants:  
                     opening_sources[self._make_opening_explorer_move] = opening_explorer_config.priority
 
         if self.config.online_moves.lichess_cloud.enabled:
             if not self.config.online_moves.lichess_cloud.only_without_book or not self.book_settings.readers:
-                if self.board.uci_variant == 'chess' or self.config.online_moves.lichess_cloud.use_for_variants:
+                if self.config.online_moves.lichess_cloud.disable_for_standard and self.board.uci_variant == 'chess':  
+                    pass
+                elif self.board.uci_variant == 'chess' or self.config.online_moves.lichess_cloud.use_for_variants:
                     opening_sources[self._make_cloud_move] = self.config.online_moves.lichess_cloud.priority
 
         if self.config.online_moves.chessdb.enabled:
