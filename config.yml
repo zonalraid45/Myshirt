@@ -70,7 +70,7 @@ engines:
       Move Overhead: 5                  # Increase if your bot flags games too often.
                     # Increase if your bot flags games too often.
     limits:    
-      time: 3.0
+      time: 0.9
   #    depth: 25                           # Deep search for standard games.
  #     nodes: 4000000
   standard_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
@@ -470,6 +470,7 @@ books:
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
+
 
 
 
