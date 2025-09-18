@@ -165,7 +165,7 @@ opening_books:
         - rbsmall
     standard_fayefish_white:                             # Blitz games (5+3)
       selection: weighted_random
-       allow_repetitions: true
+      allow_repetitions: true
       names:
         - Exoendo
         - Scorpion
