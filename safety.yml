@@ -40,7 +40,7 @@ engines:
       Hash: 4448                           # Massive hash for deep calculation.
       Move Overhead: 10                  # Increase if your bot flags games too often.
     limits:    
-      time: 5.0
+      time: 3.0
    #   depth: 25
    #   nodes: 4000000
       
@@ -159,11 +159,13 @@ opening_books:
 #       - BulletBook
 #       - Defaulmove_overhead_mnd
     standard_endogenetic-bot:
-      selection: best_move             # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      selection: best_move            # Move selection is one of "weighted_random", "uniform_random" or "best_move".
+      allow_repetitions: true
       names:                              # List of names of books to use as black.
         - rbsmall
     standard_fayefish_white:                             # Blitz games (5+3)
-      selection: weighted_random 
+      selection: weighted_random
+       allow_repetitions: true
       names:
         - Exoendo
         - Scorpion
@@ -175,6 +177,7 @@ opening_books:
         - nimas
     standard_fayefish_black:                             # Blitz games (5+3)
       selection: weighted_random 
+      allow_repetitions: true
       names:
         - Scorpion
         - Draw
@@ -277,12 +280,14 @@ opening_books:
         - Nepomniachtchi
     standard_white:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
-#     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
+#     max_depth: 16                      # Half move max depth. (Comment this line for max depth)
+      allow_repetitions: true
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
         - Exoendo
     standard_black:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
+      allow_repetitions: true
       names:       # List of names of books to use if there is no specific book for the time control, white, black or chess960.
         - One
         - Two
@@ -300,6 +305,7 @@ online_moves:
     use_for_variants: true               # Whether the Lichess opening explorer should be used for other variants than standard and chess960.
     disable_for_standard: false
     only_fromposition: true
+    allow_repetitions: true
     min_time: 10                          # Time the bot must have at least to use the online move. +10 seconds in games without increment.
     timeout: 5                            # Time the server has to respond.
     min_games: 5                          # Minimum number of games in which the position must have occurred.
@@ -315,6 +321,7 @@ online_moves:
     use_for_variants: false               # Whether the cloud should be used for other variants than standard and chess960.
     disable_for_standard: false
     only_fromposition: true
+    allow_repetitions: true
     min_eval_depth: 10                    # Minimum evaluation depth.
     min_time: 10                          # Time the bot must have at least to use the online move. +10 seconds in games without increment.
     timeout: 5                            # Time the server has to respond.
@@ -325,6 +332,7 @@ online_moves:
     priority: 100                         # Priority with which this move source is used. Higher priority is used first.
     only_without_book: false              # Whether the chessdb should only be used if there is no matching book.
     fromposition: false
+    allow_repetitions: true
     min_candidates: 1                     # Minimum number of candidate moves.
     min_time: 10                          # Time the bot must have at least to use the online move. +10 seconds in games without increment.
     timeout: 5                            # Time the server has to respond.
