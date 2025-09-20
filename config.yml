@@ -67,10 +67,10 @@ engines:
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 4498                           # Massive hash for deep calculation.
-      Move Overhead: 5                  # Increase if your bot flags games too often.
+      Move Overhead: 100                  # Increase if your bot flags games too often.
                     # Increase if your bot flags games too often.
     limits:    
-      time: 2.0
+     # time: 2.0
   #    depth: 25                           # Deep search for standard games.
  #     nodes: 4000000
   standard_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
@@ -320,11 +320,11 @@ online_moves:
 #   max_moves: 1                          # Max number of moves played from Lichess cloud eval. (Comment this line for max moves)
   chessdb:
     enabled: true                        # Activate online moves from https://chessdb.cn/queryc_en/
-    priority: 300                         # Priority with which this move source is used. Higher priority is used first.
+    priority: 1001                         # Priority with which this move source is used. Higher priority is used first.
     only_without_book: false              # Whether the chessdb should only be used if there is no matching book.
     fromposition: true
     allow_repetitions: true
-    min_candidates: 1                     # Minimum number of candidate moves.
+    min_candidates: 2                     # Minimum number of candidate moves.
     min_time: 10                          # Time the bot must have at least to use the online move. +10 seconds in games without increment.
     timeout: 5                            # Time the server has to respond.
     selection: "best"                     # Move selection is one of "optimal", "best" or "good".
@@ -486,6 +486,7 @@ books:
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
+
 
 
 
