@@ -40,8 +40,8 @@ engines:
       Move Overhead: 400                  # Increase if your bot flags games too often.
     limits:    
       time: 0.1
-   #   depth: 25
-   #   nodes: 4000000
+      depth: 21
+      nodes: 4000000
   fromposition_endogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
@@ -54,8 +54,8 @@ engines:
       Move Overhead: 400                  # Increase if your bot flags games too often.
     limits:    
       time: 0.1
-   #   depth: 25
-   #   nodes: 4000000
+      depth: 25
+      nodes: 4000000
   fromposition:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
