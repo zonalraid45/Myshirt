@@ -67,7 +67,7 @@ engines:
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Maximum Threadripper power for longer games.
       Hash: 4498                           # Massive hash for deep calculation.
-      Move Overhead: 100                  # Increase if your bot flags games too often.
+      Move Overhead: 150                  # Increase if your bot flags games too often.
                     # Increase if your bot flags games too often.
     limits:    
      # time: 2.0
@@ -486,6 +486,7 @@ books:
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
+
 
 
 
