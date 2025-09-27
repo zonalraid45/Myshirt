@@ -356,7 +356,7 @@ offer_draw:
 
 resign:
   enabled: true                          # Enable resignation to avoid hopeless positions.
-  score: -400                            # Resign when clearly losing (8 pawns down).
+  score: -300                            # Resign when clearly losing (8 pawns down).
   consecutive_moves: 8                    # More moves to confirm truly lost position.
   against_humans: false                    # Never resign against humans - fight till the end.
 # min_rating: 2300                        # Minimum rating of opponent to resign.
