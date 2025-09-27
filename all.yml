@@ -31,31 +31,31 @@ engines:
   standard_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
-    ponder: true                          # Think on opponent's time.
+    ponder: false                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
     move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
-      Threads: 4                          # Maximum Threadripper power for longer games.
-      Hash: 4448                           # Massive hash for deep calculation.
-      Move Overhead: 400                  # Increase if your bot flags games too often.
+      Threads: 1                          # Maximum Threadripper power for longer games.
+      Hash: 44                           # Massive hash for deep calculation.
+      Move Overhead: 900                  # Increase if your bot flags games too often.
     limits:    
       time: 0.1
-      depth: 21
-      nodes: 4000000
+      depth: 11
+      nodes: 400000
   standard_endogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
-    ponder: true                          # Think on opponent's time.
+    ponder: false                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
     move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
-      Threads: 4                          # Maximum Threadripper power for longer games.
-      Hash: 4448                           # Massive hash for deep calculation.
-      Move Overhead: 400                  # Increase if your bot flags games too often.
+      Threads: 1                         # Maximum Threadripper power for longer games.
+      Hash: 48                           # Massive hash for deep calculation.
+      Move Overhead: 930                  # Increase if your bot flags games too often.
     limits:    
       time: 0.1
-      depth: 25
-      nodes: 4000000
+      depth: 12
+      nodes: 40000
   standard:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
