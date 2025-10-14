@@ -233,42 +233,7 @@ opening_books:
       selection: weighted_random
       random_selection: false
       names:
-        - Human
-        - Nakamura
-        - Carlsen
-        - Caruana
-        - Ding
-        - Gukesh
-    bullet_human:
-      selection: weighted_random
-      random_selection: false
-      names:
-        - Kasparov
-        - Carlsen
-        - Caruana
-        - Ding
-        - Gukesh
-        - Nakamura
-        - Nepomniachtchi
-    blitz_human:
-      selection: weighted_random
-      random_selection: false
-      names:
-        - Human
-        - Nakamura
-        - Carlsen
-        - Nepomniachtchi
-    rapid_human:
-      selection: best_move
-      random_selection: true
-      names:
-        - Kasparov
-        - Carlsen
-        - Caruana
-        - Ding
-        - Gukesh
-        - Nakamura
-        - Nepomniachtchi
+        - b
     standard_white:
       selection: weighted_random          # Move selection is one of "weighted_random", "uniform_random" or "best_move".
 #     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
@@ -486,7 +451,7 @@ books:
   Jely: "./books/j.bin"
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
-
+  b: "./books/b.bin"
 
 
 
