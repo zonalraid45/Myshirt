@@ -378,6 +378,7 @@ matchmaking:
     bullet:                               # Arbitrary name of the matchmaking type. Names must be unique.
       tc: 0.5+0       
       rated: false                        # Time control in initial_minutes+increment_seconds format.
+      variant: chess960
 #   casual_chess960:
 #     tc: 0.5+1
 #     rated: false
@@ -452,6 +453,7 @@ books:
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
   b: "./books/b.bin"
+
 
 
 
