@@ -19,7 +19,7 @@ engines:
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
-    move_overhead_multiplier: 21.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    move_overhead_multiplier: 18.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 4                          # Max CPU threads the engine can use.
       Hash: 2508                           # Max memory (in megabytes) the engine can allocate.
@@ -226,7 +226,7 @@ opening_books:
     
     chess960:
       selection: best_move
-      allow_repetitions: true
+      allow_repetitions: false
       names:
         - chess960
     standard_human:
@@ -452,6 +452,7 @@ books:
   rbsmall: "./books/rbsmall.bin"
   polish: "./books/polish.bin"
   b: "./books/b.bin"
+
 
 
 
