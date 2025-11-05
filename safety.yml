@@ -214,10 +214,7 @@ opening_books:
       selection: best_move
       names:
         - crazyhouse
-    chess960:
-      selection: best_move
-      names:
-        - chess960
+    
     atomic_black:
       selection: best_move
       names:
