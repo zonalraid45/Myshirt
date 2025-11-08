@@ -56,7 +56,35 @@ engines:
       time: 0.1
       depth: 12
       nodes: 40000
-  standard:                               # Engine used for standard chess and when no suitable special engine is configured.
+  chess960_InvinxibleFlxsh:                               # Engine used for standard chess and when no suitable special engine is configured.
+    dir: "./engines"                      # Directory containing the engine.
+    name: "stockfish11"                     # Binary name of the engine to use.
+    ponder: false                          # Think on opponent's time.
+    silence_stderr: false                 # Suppresses stderr output.
+    move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    uci_options:                          # Arbitrary UCI options passed to the engine.
+      Threads: 1                         # Maximum Threadripper power for longer games.
+      Hash: 48                           # Massive hash for deep calculation.
+      Move Overhead: 930                  # Increase if your bot flags games too often.
+    limits:    
+      time: 0.1
+      depth: 12
+      nodes: 400
+  chess960_NecroMindX:                               # Engine used for standard chess and when no suitable special engine is configured.
+    dir: "./engines"                      # Directory containing the engine.
+    name: "stockfish11"                     # Binary name of the engine to use.
+    ponder: false                          # Think on opponent's time.
+    silence_stderr: false                 # Suppresses stderr output.
+    move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
+    uci_options:                          # Arbitrary UCI options passed to the engine.
+      Threads: 1                         # Maximum Threadripper power for longer games.
+      Hash: 48                           # Massive hash for deep calculation.
+      Move Overhead: 930                  # Increase if your bot flags games too often.
+    limits:    
+      time: 0.1
+      depth: 12
+      nodes: 40000 
+  standard:              # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
     name: "stockfish"                     # Binary name of the engine to use.
     ponder: true                          # Think on opponent's time.
