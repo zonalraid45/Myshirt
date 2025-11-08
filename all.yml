@@ -30,7 +30,7 @@ engines:
       nodes: 6000000
   chess960_exogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
-    name: "stockfish11"                     # Binary name of the engine to use.
+    name: "stockfish"                     # Binary name of the engine to use.
     ponder: false                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
     move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
@@ -44,7 +44,7 @@ engines:
       nodes: 40
   chess960_endogenetic-bot:                               # Engine used for standard chess and when no suitable special engine is configured.
     dir: "./engines"                      # Directory containing the engine.
-    name: "stockfish11"                     # Binary name of the engine to use.
+    name: "stockfish"                     # Binary name of the engine to use.
     ponder: false                          # Think on opponent's time.
     silence_stderr: false                 # Suppresses stderr output.
     move_overhead_multiplier: 50.0         # Increase if your bot flags games too often. Default move overhead is 1 second per 1 minute initital time.
