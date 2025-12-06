@@ -121,7 +121,7 @@ engines:
     limits:   # Limits that end the move calculation early.
       time: 4.0
       depth: 30                           # Deep variant search.
-      nodes: 9000000                      # High node count for variants.
+    #  nodes: 9000000                      # High node count for variants.
 # Use the same pattern for 'bullet', 'blitz', 'rapid', 'classical', time controls in initial_minutes+increment_seconds format,
 # 'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 # Append '_white', '_black', '_human' and/or '_tournament' to use the engine only as the specific color, against humans or in tournaments.
